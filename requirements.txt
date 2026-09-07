@@ -1,0 +1,5 @@
+python-telegram-bot>=22.5,<23
+httpx>=0.28,<0.29
+beautifulsoup4>=4.13,<5
+mutagen>=1.47,<2
+python-dotenv>=1.1,<2

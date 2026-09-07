@@ -1,0 +1,9 @@
+services:
+  radiojavan-downloader-bot:
+    build: .
+    container_name: radiojavan-downloader-bot
+    restart: unless-stopped
+    env_file:
+      - .env
+    volumes:
+      - ./logs:/app/logs

@@ -1,0 +1,15 @@
+.env
+.venv/
+venv/
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+logs/*.log
+*.mp3
+*.mp4
+.DS_Store
+.idea/
+.vscode/
