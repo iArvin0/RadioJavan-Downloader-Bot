@@ -8,7 +8,7 @@ from urllib.parse import urlparse
 
 import httpx
 from bs4 import BeautifulSoup
-from mutagen.id3 import APIC, TALB, TIT2, TPE1, WOAS, ID3, ID3NoHeaderError
+from mutagen.id3 import APIC, ID3, TALB, TIT2, TPE1, WOAS, ID3NoHeaderError
 
 from app.models import DownloadedMedia, MediaCandidate, TrackInfo
 
@@ -196,7 +196,7 @@ class RadioJavanClient:
             headers={"User-Agent": BROWSER_UA, "Accept": "*/*"},
         )
 
-    async def __aenter__(self) -> "RadioJavanClient":
+    async def __aenter__(self) -> RadioJavanClient:
         return self
 
     async def __aexit__(self, exc_type, exc, tb) -> None:

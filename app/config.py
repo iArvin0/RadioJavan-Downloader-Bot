@@ -20,7 +20,7 @@ class Settings:
     rj_user_agent: str | None
 
     @classmethod
-    def from_env(cls) -> "Settings":
+    def from_env(cls) -> Settings:
         token = os.getenv("BOT_TOKEN", "").strip()
         if not token:
             raise RuntimeError("BOT_TOKEN is missing. Copy .env.example to .env and set it.")

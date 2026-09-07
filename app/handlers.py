@@ -136,7 +136,7 @@ async def handle_message(update: Update, context: ContextTypes.DEFAULT_TYPE) -> 
                 f"❌ <b>Download failed</b>\n\n{html.escape(str(exc))}",
                 parse_mode=ParseMode.HTML,
             )
-        except Exception as exc:
+        except Exception:
             logger.exception("Unexpected download error | url=%s", url)
             await status.edit_text(
                 "❌ <b>Unexpected error</b>\n\nCheck the bot log for details.",
